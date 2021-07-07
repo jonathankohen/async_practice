@@ -1,0 +1,16 @@
+both programs use an event loop to execute their respective functions concurrently
+
+to start an asynchronous program, you must create and event loop by running an entry-point co-routine, done so with asyncio.run(example())
+
+async function = "co-routine". to run the co-routine, you must await it in some way, or add it to the event loop, like creating a task. Tasks allow you to run different co-routines concurrently.
+
+    tasks don't run until everything else in func is executed, or has a sustainted pause. ex/ "await asyncio.sleep(2)" may cause other executions to start running due to pause
+
+    "await task" however, waits until this task is finished before continuing instead of waiting til everything in the function is executed
+    
+
+future = representation of data that will be there in the future. i.e. value = await task
+
+
+
+
